@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZAH EDIT Pro | Cinematic Video Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <i class="fas fa-play-circle"></i> IZAH EDIT
+        </div>
+        <div class="loader-bar">
+            <div class="loader-progress" id="loaderProgress"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    <i class="fas fa-play-circle"></i> IZAH EDIT
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home nav-icon"></i> Home</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-film nav-icon"></i> Portfolio</a></li>
+                    <li><a href="#skills"><i class="fas fa-star nav-icon"></i> Skills</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope nav-icon"></i> Contact</a></li>
+                </ul>
+                <a href="#contact" class="cta-button desktop-cta">Start Project <i class="fas fa-arrow-right"></i></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#portfolio"><i class="fas fa-film"></i> Portfolio</a></li>
+            <li><a href="#skills"><i class="fas fa-star"></i> Skills</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <a href="#contact" class="cta-button mobile-cta">Start Project <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Hero Section with Enhanced Video Elements -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Crafting <span class="gradient-text">Cinematic Experiences</span> That Captivate & Inspire</h1>
+                    <p>I am Muhammad Izah Luqman, and I shape stories through video editing, color grading, and sound design. From raw <span class="highlight">clips to cinematic visuals and rich sound</span>, <span class="highlight">I bring clarity, mood, and emotion to every frame</span>, making content <span class="highlight">not just seen, but felt</span>.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-count="75">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="6">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-count="42">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="cta-button">Explore My Work</a>
+                        <a href="#contact" class="cta-button" style="background: transparent; border: 2px solid var(--primary);">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="video-container fade-in">
+                        <div class="video-placeholder">
+                            <div class="play-button" id="playButton">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <!-- Enhanced Video Elements -->
+                            <div class="video-elements">
+                                <!-- Film Strip -->
+                                <div class="film-strip"></div>
+                                
+                                <!-- Timeline with Progress -->
+                                <div class="timeline">
+                                    <div class="timeline-progress"></div>
+                                </div>
+                                
+                                <!-- Audio Waveform -->
+                                <div class="waveform">
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                    <div class="wave-bar"></div>
+                                </div>
+                                
+                                <!-- Video Editing Icons -->
+                                <div class="video-icon">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <div class="video-icon">
+                                    <i class="fas fa-sliders-h"></i>
+                                </div>
+                                <div class="video-icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <div class="video-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my recent work across various industries, demonstrating versatility and creative excellence.</p>
+            </div>
+            
+            <div class="portfolio-filter fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="music">Music Videos</button>
+                <button class="filter-btn" data-filter="documentary">Documentary</button>
+                <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Corporate Brand Video">
+                    <div class="portfolio-overlay">
+                        <h3>TechCorp Global Campaign</h3>
+                        <p>Full-scale corporate brand video for a leading tech company's product launch.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Premiere Pro</span>
+                            <span class="tag">After Effects</span>
+                            <span class="tag">Color Grading</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="music">
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Music Video Production">
+                    <div class="portfolio-overlay">
+                        <h3>"Neon Dreams" Music Video</h3>
+                        <p>Visual storytelling for an indie artist's breakthrough single with VFX elements.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">DaVinci Resolve</span>
+                            <span class="tag">VFX</span>
+                            <span class="tag">Cinematography</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="documentary">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Documentary Film">
+                    <div class="portfolio-overlay">
+                        <h3>"Vanishing Ice" Documentary</h3>
+                        <p>Environmental documentary focusing on climate change in polar regions.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Documentary</span>
+                            <span class="tag">Color Correction</span>
+                            <span class="tag">Audio Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="motion">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Motion Graphics">
+                    <div class="portfolio-overlay">
+                        <h3>3D Product Animation</h3>
+                        <p>Product launch animation for a luxury automotive brand with 3D elements.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">3D Animation</span>
+                            <span class="tag">Cinema 4D</span>
+                            <span class="tag">Motion Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fashion Campaign">
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Fashion Campaign</h3>
+                        <p>High-end fashion brand commercial shot in Paris and Milan.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Fashion</span>
+                            <span class="tag">Color Grading</span>
+                            <span class="tag">Slow Motion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="music">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Concert Film">
+                    <div class="portfolio-overlay">
+                        <h3>Live Concert Film</h3>
+                        <p>Multi-camera concert film for a major music festival with live editing.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Multi-Cam</span>
+                            <span class="tag">Live Editing</span>
+                            <span class="tag">Sound Mixing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Technical Mastery</h2>
+                <p>Comprehensive expertise across the entire video production pipeline, from concept to delivery.</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card fade-in">
+                    <i class="fas fa-film"></i>
+                    <h3>Video Editing</h3>
+                    <p>Professional editing for commercials, documentaries, social media content, and feature films using industry-standard software.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="100"></div>
+                    </div>
+                    <div style="margin-top: 15px; color: var(--accent); font-weight: 600;">Adobe Premiere Pro • DaVinci Resolve • Final Cut Pro</div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-swatchbook"></i>
+                    <h3>Color Grading</h3>
+                    <p>Creating cinematic looks and consistent color palettes that enhance storytelling and evoke specific emotions.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="75"></div>
+                    </div>
+                    <div style="margin-top: 15px; color: var(--accent); font-weight: 600;">DaVinci Resolve • Lumetri • FilmConvert</div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>Motion Graphics</h3>
+                    <p>Designing dynamic animations, titles, and visual effects for enhanced storytelling and brand identity.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="45"></div>
+                    </div>
+                    <div style="margin-top: 15px; color: var(--accent); font-weight: 600;">After Effects • Cinema 4D • Blender</div>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-volume-up"></i>
+                    <h3>Audio Design</h3>
+                    <p>Mixing, sound design, and audio post-production for immersive experiences that complement visual storytelling.</p>
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="85"></div>
+                    </div>
+                    <div style="margin-top: 15px; color: var(--accent); font-weight: 600;">Adobe Audition • Pro Tools • iZotope</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Let's Create Together</h2>
+                <p>Have a project in mind? Get in touch and let's discuss how we can bring your vision to life.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Start Your Project</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Let's connect and create something amazing together.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>theizahedit@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Studio Location</h4>
+                                <p>Los Angeles, CA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Currently accepting new projects for Q1 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="project" placeholder=" " required>
+                            <label for="project">Project Type</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder=" " required></textarea>
+                            <label for="message">Project Details</label>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 30px;">
+                <i class="fas fa-play-circle"></i> IZAH EDIT
+            </div>
+            <p style="max-width: 600px; margin: 0 auto 40px; color: var(--gray); line-height: 1.7;">Transforming ideas into visual masterpieces through cutting-edge editing, cinematic storytelling, and technical excellence. Let's bring your vision to life.</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p class="copyright">© 2026 IZAH EDIT. All rights reserved. Crafted with passion for visual storytelling.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', function() {
+            const loader = document.getElementById('loader');
+            const loaderProgress = document.getElementById('loaderProgress');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                loaderProgress.style.width = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        loader.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 500);
+                }
+            }, 100);
+            
+            // Prevent scrolling during loading
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top functionality
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 15 : 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 6 + 2;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                particlesContainer.appendChild(particle);
+                
+                // Fade in
+                setTimeout(() => {
+                    particle.style.opacity = '0.3';
+                }, delay * 1000);
+            }
+        }
+        
+        createParticles();
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate skill bars if it's a skill card
+                    if (entry.target.classList.contains('skill-card')) {
+                        const skillBar = entry.target.querySelector('.skill-level-bar');
+                        const level = skillBar.getAttribute('data-level');
+                        setTimeout(() => {
+                            skillBar.style.width = `${level}%`;
+                        }, 300);
+                    }
+                    
+                    // Animate stats if it's a stat number
+                    if (entry.target.closest('.hero-stats')) {
+                        const statNumbers = document.querySelectorAll('.stat-number');
+                        statNumbers.forEach(stat => {
+                            const target = parseInt(stat.getAttribute('data-count'));
+                            let current = 0;
+                            const increment = target / 50;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                stat.textContent = Math.floor(current);
+                            }, 30);
+                        });
+                    }
+                    
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+
+        // Enhanced Play button animation with video simulation
+        const playButton = document.getElementById('playButton');
+        const videoContainer = document.querySelector('.video-container');
+        const videoElements = document.querySelector('.video-elements');
+        
+        playButton.addEventListener('click', function() {
+            // Change play button to pause
+            playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            playButton.style.background = 'rgba(255, 50, 100, 0.4)';
+            playButton.style.boxShadow = '0 0 60px rgba(255, 50, 100, 0.8)';
+            playButton.style.borderColor = 'rgba(255, 50, 100, 0.6)';
+            
+            // Scale up video container
+            videoContainer.style.transform = 'scale(1.15)';
+            
+            // Enhance video elements
+            document.querySelector('.film-strip').style.animationDuration = '10s';
+            document.querySelector('.timeline-progress').style.animationDuration = '2s';
+            
+            // Increase waveform animation speed
+            document.querySelectorAll('.wave-bar').forEach(bar => {
+                bar.style.animationDuration = '0.8s';
+            });
+            
+            // Make video icons more visible
+            document.querySelectorAll('.video-icon').forEach(icon => {
+                icon.style.transform = 'scale(1.3)';
+                icon.style.opacity = '1';
+            });
+            
+            // Add pulsing effect to video container
+            videoContainer.style.animation = 'float 4s ease-in-out infinite, rotate 30s linear infinite reverse';
+            
+            // Simulate video playing for 5 seconds
+            setTimeout(() => {
+                // Reset to initial state
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
+                playButton.style.background = 'rgba(255, 255, 255, 0.15)';
+                playButton.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                playButton.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                
+                videoContainer.style.transform = 'scale(1)';
+                videoContainer.style.animation = 'float 8s ease-in-out infinite, rotate 60s linear infinite reverse';
+                
+                // Reset video elements
+                document.querySelector('.film-strip').style.animationDuration = '20s';
+                document.querySelector('.timeline-progress').style.animationDuration = '3s';
+                
+                document.querySelectorAll('.wave-bar').forEach(bar => {
+                    bar.style.animationDuration = '1.5s';
+                });
+                
+                document.querySelectorAll('.video-icon').forEach(icon => {
+                    icon.style.transform = '';
+                    icon.style.opacity = '';
+                });
+            }, 5000);
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 400);
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitButton.style.background = 'linear-gradient(135deg, #00b09b, #96c93d)';
+            
+            // Reset form
+            this.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.style.background = '';
+            }, 3000);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a, .mobile-cta').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add hover effect to skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('i');
+                icon.style.transform = 'scale(1.2) rotate(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('i');
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Handle window resize for particles
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                const particlesContainer = document.getElementById('particles');
+                particlesContainer.innerHTML = '';
+                createParticles();
+            }, 250);
+        });
+
+        // Add touch support for mobile
+        document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Prevent zoom on double-tap for mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Initialize stats animation on page load
+        window.addEventListener('load', function() {
+            // Trigger stats animation after a short delay
+            setTimeout(() => {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-count'));
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        stat.textContent = Math.floor(current);
+                    }, 30);
+                });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
